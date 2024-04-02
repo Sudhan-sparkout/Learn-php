@@ -12,13 +12,15 @@
             <label for="country">Country</label>
             <input type="text" name="country" id="country">
         </div>
-        <input type="submit" value="capital">
+        <input type="submit" value="capital" name="submit">
     </form>
 </body>
 </html>
 <?php 
+if(isset($_POST["submit"])){
 $capitals=array("india"=>"New delhi","usa"=>"WASHINGTON","japan"=>"tokyo","china"=>"Beijing");
 
 $capital=$capitals[strtolower($_POST["country"])];
 echo $capital;
+}
 ?>
